@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	class myStudents
+	{
+		constructor(studentName,studentClass,studentAge)
+		{
+			this.name=studentName;
+			this.classGrade=studentClass;
+			this.age=studentAge;
+		}
+		slogan()
+		{
+			return `My name is ${this.name} and i read in ${this.classGrade}class`;	
+		}
+		static add(a,b)
+		{
+			return a+b;
+		}
+	}
+	class marks extends myStudents
+	{
+		constructor(studentName,studentClass,studentAge,studentMarks)
+		{
+			super(studentName,studentClass,studentAge)
+			this.studentGrade=studentMarks;
+		}
+	}
+
+	let student1 = new marks("ali",12,18,1024);
+	let student2 = new marks("ahmad",12,19,1011);
+	console.log(student1.slogan());
+	console.log(student1);
+	console.log(student2);
+
+	let a1=myStudents.add(5,5);
+	console.log(a1);
+</script>
+
+</body>
+</html>

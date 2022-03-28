@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Multiple Objects</title>
+</head>
+<body>
+<script> 
+class Student{
+	constructor(firstname,lastname)
+	{
+		this.first_name=firstname;
+		this.last_name=lastname;
+	}
+	print()
+	{
+		document.write(`First Name:${this.first_name}<br/> Last Name:${this.last_name}`)
+	}
+}
+
+class Course{
+	constructor(title,fee)
+	{
+		this.title=title;
+		this.fee=fee;
+	}
+	print()
+	{
+		document.write(`<br/>Title:${this.title} Fee:${this.fee}`)
+	}
+}
+class Teacher{
+	constructor(name,qualification)
+	{
+		this.name=name;
+		this.qualification=qualification;
+	}
+	print()
+	{
+		document.write(`<br/>Teacher Name:${this.name} Qualification:${this.qualification}`)
+	}
+}
+let student1=new Student("Khaqan","ali");
+let course1=new Course("HTML",8000);
+let course2=new Course("CSS",10000);
+let teacher1=new Teacher("Asawir","M.Sc");
+
+student1.print();
+course1.print();
+course2.print();
+teacher1.print();
+
+</script>
+</body>
+</html>
